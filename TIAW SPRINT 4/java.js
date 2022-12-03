@@ -1,10 +1,10 @@
 const cibus = {
   lista: [
     {
-      nomeDoProduto: 'VITAMINA DE MORANGO 500 mL',
+      nomeDoProduto: 'Morango 300g',
       preco: 'R$12.00',
       img1: 'logoverde.jpg',
-      img2: 'copo-vitamina-morango.png',
+      img2: 'images/morango.jpg',
       descricaoProduto: 'Vitamina Natural, 100% Integral E Sem Adição De Açúcar',
       ingredientes: 'morango e leite',
       estrelinha1: 'bx bxs-star',
@@ -17,8 +17,11 @@ const cibus = {
       descricaoSupermercado: 'O Supermercado Verdemar, ou simplesmente Verdemar, é uma rede de supermercados da cidade de Belo Horizonte.'
 
     }
+    
   ]
+  
 }
+
 
 
 
