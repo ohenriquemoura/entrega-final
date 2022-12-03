@@ -26,6 +26,7 @@ fetch("./products.json")
       const header = card.querySelector("[data-header]")
       const body = card.querySelector("[data-body]")
       const price = card.querySelector("[data-price]")
+      const local = card.querySelector("[data-local]")
       
       const imgtag = card.querySelector("[data-image]");
       console.log(imgtag)
@@ -40,12 +41,12 @@ fetch("./products.json")
       header.textContent = products.title
       body.textContent = products.type
       price.textContent = products.price
-      
+      local.textContent= products.description
       
       
 
       userCardContainer.append(card)
-      return { title: products.title, type: products.type, price: products.price, element: card ,imgtag:products.filename
+      return { title: products.title, type: products.type, price: products.price,local:products.description, element: card ,imgtag:products.filename
       }
     })
   })
