@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   <script src="mobile-navbar.js"></script>
+  <script src="empresas.js"></script>
+   
   <title>CIBUS</title>
 </head>
 
@@ -31,8 +33,26 @@
           </ul>
         </nav>
       </header>
-      <h1>Em breve!</h1>
-      <img id="gif" src="images/gifo.gif" alt="">
+      <nav class="navbar" style="background-color: #fa7f72">
+        <p>
+        <h3>Entrar em contato com o mercado</h3>
+        </p>
+        <form class="container-fluid">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">&#128270</span>
+                <form class="d-flex" role="search">
+                    <input type="search" class="form-control" id="textoFiltro" placeholder="Digite o nome da empresa"
+                        aria-label="Pesquisar" aria-describedby="basic-addon1" oninput="filtro()">
+                </form>
+            </div>
+        </form>
+    </nav>
+    <!-- conteudo -->
+    <div class="container-fluid">
+        <div class="row" id="tela">
+
+        </div>
+    </div>
     </div>
     <footer id="footer">
       <div class="container-footer">
