@@ -4,7 +4,7 @@ footer {
     font-size: small;
 }
 .card{
-  color: #fff;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -36,7 +36,7 @@ footer {
 
 body {
     background-image: url(./images/fundo2.jpg);
-    
+    margin: auto;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     
 }
