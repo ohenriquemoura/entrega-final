@@ -40,7 +40,7 @@ if (!bancoEmpresas) {
             "wppEmpresa": "999-999-999"
         },
         {
-            "nomeEmpresa": "BH",
+            "nomeEmpresa": "Verdemar",
             "tipoEmpresa": "Supermercados",
             "cidadeEmpresa": "CONTAGEM",
             "endEmpresa": "Av. João César de Oliveira, 1275 - Eldorado",
