@@ -85,6 +85,15 @@ if (!bancoEmpresas) {
             "telEmpresa": "3911-0704",
             "instaEmpresa": "padaria_dupao",
             "wppEmpresa": "999999999"
+        },
+        {
+            "nomeEmpresa": "Trigopane",
+            "tipoEmpresa": "Padaria",
+            "cidadeEmpresa": "BH",
+            "endEmpresa": "Av. Professor Mário Werneck, 1352 - Buritis",
+            "telEmpresa": "3911-0704",
+            "instaEmpresa": "trigopane_oficial",
+            "wppEmpresa": "999999999"
         }
 
     ]
