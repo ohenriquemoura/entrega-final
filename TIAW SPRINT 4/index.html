@@ -3,16 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>CIBUS - Os Menores Preços pra Você</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="menorpreco.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="carousel.css">
+        <link rel="stylesheet" href="style2.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="carousel.js"></script>
+        <script src="products.js"></script>
        
         <script src="script.js" defer></script>
         <script src="mobile-navbar.js"></script>
         <!-- font awesome -->
         <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     </head>
+
+    <script> var qtdProd = 0; </script>
+
+
     <body>
         <div id="page-container">
             <div id="content-wrap">
@@ -34,7 +43,7 @@
                   </ul>
                 </nav>
                 <h1 class = "lg-title">Menores Preços!</h1>
-                <p class = "text-light2">Essa Seção apresenta os menores preços para os produtos do nosso catálogo!</p>
+                <!-- <p class = "text-light2">Essa Seção apresenta os menores preços para os produtos do nosso catálogo!</p> -->
 
               </header>
 
@@ -328,6 +337,71 @@
                 </div>
             </div>
         </div>
+
+        <h1>PRODUTOS EM DESTAQUE</h1>
+
+        <div class="carousel-wrapper">
+          <a id="prev" name="prev" class="button-carousel" onclick="slide(this,qtdProd)" style="color: black;">
+            < </a>
+              <div class="carousel-principal" style="margin-left: 50px;">
+                <div class="box-principal">
+                  <ul class="item-list" id="list-items">
+                  </ul>
+                </div>
+              </div>
+              <a id="next" name="next" class="button-carousel" onclick="slide(this,qtdProd)" style="color: black;"> > </a>
+        </div>
+    
+        <script>
+    
+          function loadLista() {
+    
+            let lista = document.getElementById('list-items');
+    
+            let produtos = [];
+    
+            fetch("./products.json")
+              .then(res => res.json())
+              .then(data => {
+    
+                produtos = data;
+    
+                console.log(produtos);
+    
+                produtos.forEach(produto => {
+    
+                  var descricao = (produto.description.length > 50) ? produto.description.substr(0, 50) + '...' : produto.description;
+    
+                  console.log(produto);
+    
+                  /*lista.innerHTML = lista.innerHTML + 
+                    '<li class="item">' +
+                      '<div class="item-box">'+
+                        '<img src="' + produto.filename + '" class="item-image" height="225" width="225"><br>'+
+                        '<h2>' + produto.title + '</h2>'+
+                        '<div class="item-desc">'+
+                          '<article>' + descricao + '</article>'+
+                          '<span> Preço: R$ ' + produto.price + '</span><br>' +
+                          '<span> Avalaiação: ' + produto.rating + '</span>' +
+                          '<a href "menorpreco.html"<button class="item-button">Menor Preço</button></a>'+
+                        '</div>'+
+                      '</div>'+
+                    '</li>';  */
+    
+                  lista.innerHTML = lista.innerHTML +
+                    '<div class="card" style="margin: 0px 10px; display: inline-block;"><div class="header" data-header="">' + produto.title + '</div><br><div class="body" data-body="">Frutas</div><br><div class="price" data-price="" style="color: white; display: block; margin: 5px 0px;">R$ ' + produto.price + '</div><img src="' + produto.filename + '" id="imgtag" data-image="" style="margin-bottom: 5px;"><div class="link"><!-- <a href="menorpreco.html">-&gt;Menor Preço!</a>--></div></div>';
+    
+                  qtdProd++;
+    
+                })
+    
+              });
+    
+          }
+    
+          this.loadLista();
+    
+        </script>
 
         <div class = "product-collection">
             <div class = "container">
