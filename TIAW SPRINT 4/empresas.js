@@ -31,8 +31,8 @@ if (!bancoEmpresas) {
             "wppEmpresa": "3132721725"
         },
         {
-            "nomeEmpresa": "vovo nita",
-            "tipoEmpresa": "padaria",
+            "nomeEmpresa": "Vovó Nita",
+            "tipoEmpresa": "Padaria",
             "cidadeEmpresa": "BH",
             "endEmpresa": "Rua Sergipe, 321 - Funcionários",
             "telEmpresa": "999-999-999",
