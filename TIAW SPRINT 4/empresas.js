@@ -131,7 +131,7 @@ function exibirEmpresas(filtroBusca) {
                             <p class="card-text">Telefone: ${empresa.telEmpresa}</p>
                             <a href="https://www.instagram.com/${empresa.instaEmpresa}"target="_blank" class="btn btn-primary">Instagram </a>
                             <a href="https://api.whatsapp.com/send?phone=55${empresa.wppEmpresa}&text=Ola,%20descobri%20voces%20pelo%20CibusAPP."target=”_blank” class="btn btn-success" onclick="(wpp())">Whatsapp</a>
-                            <button class="btn btn-primary" value="${empresa.local}" onclick="addmarker(this)">Ver Loja no Mapa </button>
+                            <a href="#map"><button class="btn btn-primary" value="${empresa.local}" onclick="addmarker(this)">Ver Loja no Mapa </button></a>
                             </div>
                             </div>`
 

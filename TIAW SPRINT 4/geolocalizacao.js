@@ -16,6 +16,7 @@ markers = []
 
 function addmarker(btn) {
     var coordenadas = btn.value;
+    markers.pop();
     markers.push(lojas[coordenadas]);
     this.sucess;
 }
